@@ -1,0 +1,26 @@
+.header {
+    background-color: $white;
+
+    &__container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.menu {
+    &__item {
+
+        margin: 0 1.25rem;
+    }
+
+    &__link {
+        color: $grayishBlue;
+        padding: 0.1rem 0.5rem;
+
+        &:hover {
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, $limeGreen, $brightCyan, $limeGreen);
+            border-image-slice: 1;
+        }
+    }
+}

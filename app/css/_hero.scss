@@ -1,0 +1,73 @@
+.hero {
+    text-align: center;
+    background-color: $veryLightGray;
+
+    &__img {
+        min-height: 24.5rem;
+        position: relative;
+        width: 100%;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 2;
+            min-height: 41.25rem;
+        }
+
+
+        &::before,
+        &::after {
+            width: 100%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            display: block;
+        }
+
+        &::before {
+            background-image: url('/images/bg-intro-mobile.svg');
+            background-position: center top;
+            background-size: cover;
+
+            @include breakpoint-up(large) {
+                width: 150%;
+                height: 110%;
+                background-image: url('/images/bg-intro-desktop.svg');
+                background-position: left bottom;
+                background-size: 150%;
+            }
+        }
+
+        &::after {
+            background-image: url('/images/image-mockups.png');
+            background-position: center bottom;
+            background-size: 90%;
+
+            @include breakpoint-up(medium) {
+                background-size: 50%;
+                background-position: center center;
+            }
+
+            @include breakpoint-up(large) {
+                width: 120%;
+                height: 122%;
+                background-size: 105%;
+                background-position: center -48px;
+                left: 20%;
+            }
+        }
+    }
+
+    &__text {
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 1;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        margin-top: 2.25rem;
+    }
+
+}

@@ -1,0 +1,39 @@
+.articles {
+    background-color: $veryLightGray;
+}
+
+.article {
+
+    &__item {
+        border-radius: 0.3125rem;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+        transition: transform 250ms;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+
+    &__text {
+
+        padding: 1.75rem;
+
+        p {
+            font-size: 0.875rem;
+            color: $grayishBlue;
+        }
+
+        span {
+            text-align: left;
+            color: $grayishBlue;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__image {
+        height: 12.5rem;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,28 @@
+.social {
+    &__item {
+
+        svg {
+            fill: white;
+        }
+
+        &--facebook:hover svg path {
+            fill: #3b5998;
+        }
+
+        &--youtube:hover svg path {
+            fill: #cd201f;
+        }
+
+        &--twitter:hover svg path {
+            fill: #55acee;
+        }
+
+        &--pinterest:hover svg path {
+            fill: #3b5998;
+        }
+
+        &--instagram:hover svg path {
+            fill: #DD4B39;
+        }
+    }
+}

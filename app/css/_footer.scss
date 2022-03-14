@@ -1,0 +1,96 @@
+.footer {
+    background-color: $darkBlue;
+
+
+    &__wrapper {
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas: "logo menu button"
+                "social menu copyright";
+            justify-items: start;
+            text-align: left;
+        }
+
+    }
+
+    &__logo {
+
+        @include breakpoint-up(large) {
+            grid-area: logo;
+            justify-self: start;
+            align-self: center;
+        }
+    }
+
+    &__social {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(large) {
+            grid-area: social;
+            justify-self: start;
+            align-self: start;
+            margin: 0;
+        }
+
+        a {
+            padding: 0.375rem;
+
+            svg {
+                transition: transform 250ms;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+
+    &__menu {
+
+        @include breakpoint-up(large) {
+            grid-area: menu;
+            display: flex;
+            align-self: end;
+            column-gap: 4rem;
+        }
+
+        li {
+            padding: 0.375rem;
+
+            @include breakpoint-up(large) {
+                margin-bottom: 0.475rem;
+            }
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+    }
+
+    &__button {
+        margin: 2rem 0;
+
+        @include breakpoint-up(large) {
+            grid-area: button;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+
+    &__copyright {
+
+        @include breakpoint-up(medium) {
+            grid-area: copyright;
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}
