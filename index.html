@@ -11,7 +11,7 @@
     <title>EasyBank</title>
 </head>
 <body>
-  
+    <div class="js-overlay"></div>
     <header class="header">
         <div class="container container--pall header__container flex flex-jc-sb flex-ai-c">
             <a href="http://" class="header__logo">
@@ -26,10 +26,20 @@
                     <li class="menu__item"><a href="" class="menu__link">Carrers</a></li>
                 </ul>
             </nav>
-            <button class="hamburger hide-for-desktop"></button>
+            <button class="hamburger hide-for-desktop">
+                <span class="hamburger__icon"></span>
+            </button>
             <a href="/" class="header__button button button--link hide-for-mobile">Request Invite</a>
-            <div class="overlay"></div>
         </div>
+         <nav class="mobile-menu hide-for-desktop">
+                <ul class="flex flex-ai-c">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Carrers</a></li>
+                </ul>
+            </nav>
     </header>
     <main>
         <div class="section hero">
@@ -152,5 +162,6 @@
                </div>
            </div> 
     </footer>
+    <script src="/app/js/script.js"></script>
 </body>
 </html>

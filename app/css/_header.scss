@@ -1,9 +1,15 @@
 .header {
-    background-color: $white;
+    position: relative;
+
 
     &__container {
         padding-top: 1rem;
         padding-bottom: 1rem;
+        background-color: $white;
+    }
+
+    &--active {
+        z-index: 2;
     }
 }
 
@@ -22,5 +28,30 @@
             border-image: linear-gradient(90deg, $limeGreen, $brightCyan, $limeGreen);
             border-image-slice: 1;
         }
+    }
+}
+
+.mobile-menu {
+    background-color: $white;
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 1.5rem;
+    padding: 1.625rem;
+    border-radius: 5px;
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        padding: 1rem;
+    }
+
+    a {
+        font-weight: 400;
+        color: $darkBlue;
     }
 }

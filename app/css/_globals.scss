@@ -77,6 +77,7 @@ a {
 }
 
 button {
+    background: transparent;
     position: relative;
     display: inline-block;
     position: relative;
@@ -118,18 +119,7 @@ p {
     line-height: 1.4;
 }
 
-.section {
-    &__text {
-        @include breakpoint-up(large) {
-            text-align: left;
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-            width: 60%;
-        }
-    }
-}
-
-.overlay {
+.js-overlay {
     position: fixed;
     background: rgb(45, 49, 77);
     background: linear-gradient(180deg, rgba(45, 49, 77, 1) 0%, rgba(243, 244, 246, 1) 100%);
@@ -140,6 +130,21 @@ p {
     right: 0;
     z-index: 1;
     display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.section {
+    &__text {
+        @include breakpoint-up(large) {
+            text-align: left;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            width: 60%;
+        }
+    }
 }
 
 .button {
@@ -163,6 +168,58 @@ p {
 
     &--glow {
         animation: glow 6s linear infinite;
+    }
+}
+
+.hamburger {
+    padding: 1rem;
+
+    &:hover:not(.hamburger--active) {
+        .hamburger__icon {
+            &::after {
+                transform: translateX(-6px) translateY(-6px);
+            }
+
+            &::before {
+                transform: translateX(6px) translateY(6px);
+            }
+        }
+    }
+
+    &--active {
+        .hamburger__icon {
+            background-color: transparent;
+
+            &::before {
+                transform: translateY(0) rotate(-45deg);
+            }
+
+            &::after {
+                transform: translateY(0) rotate(45deg);
+            }
+        }
+    }
+
+
+    &__icon {
+        position: relative;
+        transition: background-color .1s .2s ease-in-out;
+        @include hamburger-line();
+
+        &::after,
+        &::before {
+            content: '';
+            @include hamburger-line();
+            transition: transform .2s .2s ease;
+        }
+
+        &::after {
+            transform: translateY(-6px);
+        }
+
+        &::before {
+            transform: translateY(6px);
+        }
     }
 }
 
