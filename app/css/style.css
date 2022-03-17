@@ -410,7 +410,7 @@ p {
 }
 
 .hero__img::before {
-  background-image: url("/images/bg-intro-mobile.svg");
+  background-image: url("./images/bg-intro-mobile.svg");
   background-position: center top;
   background-size: cover;
 }
@@ -419,14 +419,14 @@ p {
   .hero__img::before {
     width: 150%;
     height: 110%;
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("./images/bg-intro-desktop.svg");
     background-position: left bottom;
     background-size: 150%;
   }
 }
 
 .hero__img::after {
-  background-image: url("/images/image-mockups.png");
+  background-image: url("./images/image-mockups.png");
   background-position: center bottom;
   background-size: 90%;
 }
