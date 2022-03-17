@@ -151,10 +151,13 @@ p {
   right: 0;
   z-index: 1;
   display: none;
+  opacity: 0;
 }
 
 .js-overlay--active {
   display: block;
+  -webkit-animation: fadeIn 0.4s forwards;
+          animation: fadeIn 0.4s forwards;
 }
 
 @media (min-width: 64em) {
@@ -266,6 +269,24 @@ p {
   }
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -276,30 +297,6 @@ p {
   .hide-for-desktop {
     display: none;
   }
-}
-
-.social__item svg {
-  fill: white;
-}
-
-.social__item--facebook:hover svg path {
-  fill: #3b5998;
-}
-
-.social__item--youtube:hover svg path {
-  fill: #cd201f;
-}
-
-.social__item--twitter:hover svg path {
-  fill: #55acee;
-}
-
-.social__item--pinterest:hover svg path {
-  fill: #3b5998;
-}
-
-.social__item--instagram:hover svg path {
-  fill: #DD4B39;
 }
 
 .header {
@@ -314,6 +311,8 @@ p {
 
 .header--active {
   z-index: 2;
+  -webkit-animation: fadeIn 0.4s forwards;
+          animation: fadeIn 0.4s forwards;
 }
 
 .menu__item {
