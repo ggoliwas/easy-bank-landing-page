@@ -16,18 +16,33 @@
 
 .menu {
     &__item {
-
         margin: 0 1.25rem;
     }
 
     &__link {
+        position: relative;
         color: $grayishBlue;
         padding: 0.1rem 0.5rem;
+        transition: color 300ms ease-in;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            bottom: -30px;
+            background: linear-gradient(90deg, $limeGreen, $brightCyan, $limeGreen);
+            transition: opacity 300ms ease-in;
+            opacity: 0;
+        }
 
         &:hover {
-            border-bottom: 2px solid transparent;
-            border-image: linear-gradient(90deg, $limeGreen, $brightCyan, $limeGreen);
-            border-image-slice: 1;
+            color: $darkBlue;
+
+            &::before {
+                opacity: 1;
+            }
         }
     }
 }

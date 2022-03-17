@@ -20,6 +20,12 @@
 
         padding: 1.75rem;
 
+        h4 {
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+
         p {
             font-size: 0.875rem;
             color: $grayishBlue;
